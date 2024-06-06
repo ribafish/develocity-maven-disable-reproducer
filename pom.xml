@@ -3,11 +3,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>common-develocity-maven-configuration</artifactId>
+    <artifactId>develocity-maven-disable-reproducer</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>Common Develocity Maven configuration</name>
-    <url>https://github.com/gradle/develocity-build-config-samples/tree/main/common-develocity-maven-configuration</url>
+    <name>Develocity Maven Disable Reproducer</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
