@@ -53,6 +53,22 @@ jobs:
           distribution: 'temurin'
       - name: Build with Maven
         run: ./mvnw clean package -B -Ddevelocity.enabled=true
+  enable-env-var-override-cmdline:
+    name: Enable Develocity with env var, but override with command line (disable)
+    runs-on: ubuntu-latest
+    env:
+      DEVELOCITY_ACCESS_KEY: ${{ secrets.DV_ACCESS_KEY }}
+      DEVELOCITY_ENABLED: true
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: Build with Maven
+        run: ./mvnw clean package -B -Ddevelocity.enabled=false
   no-env-var:
     name: No env var, but access key is set up
     runs-on: ubuntu-latest
